@@ -4,6 +4,11 @@ from openai import OpenAI
 import json
 from io import BytesIO
 import re
+import PyPDF2
+from reportlab.lib.pagesizes import letter, A4
+from reportlab.pdfgen import canvas
+from pypdf import PdfReader, PdfWriter
+from reportlab.lib.units import mm
 
 def get_response(chapter, font_size, lineheight):
   
